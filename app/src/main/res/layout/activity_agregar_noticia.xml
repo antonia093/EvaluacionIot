@@ -12,6 +12,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
             android:text="Nueva Noticia"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -28,6 +29,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Resumen" />
+
+        <!-- Campo para URL de imagen -->
+        <EditText
+            android:id="@+id/etImageUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="URL de la imagen (opcional)"
+            android:inputType="textUri" />
 
         <EditText
             android:id="@+id/etContenido"

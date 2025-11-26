@@ -9,6 +9,16 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <!-- Imagen detalle -->
+        <ImageView
+            android:id="@+id/ivNoticiaDetalle"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="Imagen Noticia" />
+
         <TextView
             android:id="@+id/tvTituloDetalle"
             android:layout_width="match_parent"

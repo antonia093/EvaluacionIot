@@ -17,6 +17,7 @@ class AgregarNoticiaActivity : AppCompatActivity() {
 
         val etTitulo = findViewById<EditText>(R.id.etTitulo)
         val etResumen = findViewById<EditText>(R.id.etResumen)
+        val etImageUrl = findViewById<EditText>(R.id.etImageUrl) // Nuevo campo
         val etContenido = findViewById<EditText>(R.id.etContenido)
         val etAutor = findViewById<EditText>(R.id.etAutor)
         val etFecha = findViewById<EditText>(R.id.etFecha)
@@ -26,12 +27,13 @@ class AgregarNoticiaActivity : AppCompatActivity() {
         btnGuardar.setOnClickListener {
             val titulo = etTitulo.text.toString()
             val resumen = etResumen.text.toString()
+            val imageUrl = etImageUrl.text.toString() // Obtener URL
             val contenido = etContenido.text.toString()
             val autor = etAutor.text.toString()
             val fecha = etFecha.text.toString()
 
             if (titulo.isEmpty() || resumen.isEmpty() || contenido.isEmpty() || autor.isEmpty() || fecha.isEmpty()) {
-                mostrarAlerta("Error", "Por favor, completa todos los campos.")
+                mostrarAlerta("Error", "Por favor, completa los campos obligatorios (la imagen es opcional).")
                 return@setOnClickListener
             }
 
@@ -40,7 +42,8 @@ class AgregarNoticiaActivity : AppCompatActivity() {
                 resumen = resumen,
                 contenido = contenido,
                 autor = autor,
-                fecha = fecha
+                fecha = fecha,
+                imageUrl = imageUrl // Guardar URL
             )
 
             guardarNoticia(noticia)

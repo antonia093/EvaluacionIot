@@ -5,6 +5,16 @@
     android:orientation="vertical"
     android:padding="16dp"
     android:background="?attr/selectableItemBackground">
+    
+    <!-- Imagen de la noticia -->
+    <ImageView
+        android:id="@+id/ivNoticia"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        android:contentDescription="Imagen Noticia" />
 
     <TextView
         android:id="@+id/tvTitulo"

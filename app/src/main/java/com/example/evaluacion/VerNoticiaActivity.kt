@@ -1,9 +1,12 @@
 package com.example.evaluacion
 
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.bumptech.glide.Glide
 
 class VerNoticiaActivity : AppCompatActivity() {
 
@@ -15,6 +18,7 @@ class VerNoticiaActivity : AppCompatActivity() {
         val tvAutorFecha = findViewById<TextView>(R.id.tvAutorFecha)
         val tvContenido = findViewById<TextView>(R.id.tvContenidoDetalle)
         val btnVolver = findViewById<Button>(R.id.btnVolver)
+        val ivNoticia = findViewById<ImageView>(R.id.ivNoticiaDetalle)
 
         val noticia = intent.getSerializableExtra("noticia") as? Noticia
 
@@ -22,6 +26,15 @@ class VerNoticiaActivity : AppCompatActivity() {
             tvTitulo.text = noticia.titulo
             tvAutorFecha.text = "Por: ${noticia.autor} | Fecha: ${noticia.fecha}"
             tvContenido.text = noticia.contenido
+
+            if (noticia.imageUrl.isNotEmpty()) {
+                ivNoticia.visibility = View.VISIBLE
+                Glide.with(this)
+                    .load(noticia.imageUrl)
+                    .into(ivNoticia)
+            } else {
+                ivNoticia.visibility = View.GONE
+            }
         }
 
         btnVolver.setOnClickListener {

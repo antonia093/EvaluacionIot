@@ -8,6 +8,15 @@
     android:background="@color/white"
     android:gravity="center">
 
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="24dp"
+        android:src="@mipmap/ic_launcher"
+        android:contentDescription="Logo App" />
+
     <!-- Título -->
     <TextView
         android:layout_width="wrap_content"
