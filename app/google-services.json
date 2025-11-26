@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "530320939131",
+    "project_id": "app-oit-miercoles",
+    "storage_bucket": "app-oit-miercoles.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:530320939131:android:2e05336cb7be8be405eade",
+        "android_client_info": {
+          "package_name": "com.example.evaluacion"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzNYu66P5BNSBPUTyqveGhb-5XNKQVs18"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
